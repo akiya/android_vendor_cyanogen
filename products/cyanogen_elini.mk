@@ -8,7 +8,7 @@ $(call inherit-product, vendor/cyanogen/products/common_full.mk)
 $(call inherit-product, vendor/cyanogen/products/gsm.mk)
 
 # Include FM-Radio stuff
-$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
+#$(call inherit-product, vendor/cyanogen/products/bcm_fm_radio.mk)
 
 PRODUCT_NAME := cyanogen_elini
 PRODUCT_BRAND := lge
