@@ -20,21 +20,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=lge_elini BUILD_ID=FRG83G BUILD_DIS
 # Extra Star overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/elini
 
-#
-# Set ro.modversion
-#
-ifdef CYANOGEN_NIGHTLY
-    PRODUCT_PROPERTY_OVERRIDES += \
-        ro.modversion=CyanogenMod-7-$(shell date +%m%d%Y)-NIGHTLY-elini
-else
-    ifdef CYANOGEN_RELEASE
-        PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-elini
-    else
-        PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=CyanogenMod-7.1.0-elini-KANG
-    endif
-endif
+# Release name and versioning
+PRODUCT_RELEASE_NAME := elini-aki-$(shell date +%m%d%Y)
+PRODUCT_VERSION_DEVICE_SPECIFIC :=
+-include vendor/cyanogen/products/common_versions.mk
 
 #
 # Copy prebuilt files
