@@ -21,8 +21,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=lge_elini BUILD_ID=FRG83G BUILD_DIS
 PRODUCT_PACKAGE_OVERLAYS += vendor/cyanogen/overlay/elini
 
 # Release name and versioning
-PRODUCT_RELEASE_NAME := elini-aki-$(shell date +%Y%m%d)
-PRODUCT_VERSION_DEVICE_SPECIFIC :=
+#PRODUCT_RELEASE_NAME := elini-aki-$(shell date +%Y%m%d)
+PRODUCT_VERSION_DEVICE_SPECIFIC := -aki-$(shell date +%Y%m%d)
 -include vendor/cyanogen/products/common_versions.mk
 
 #
